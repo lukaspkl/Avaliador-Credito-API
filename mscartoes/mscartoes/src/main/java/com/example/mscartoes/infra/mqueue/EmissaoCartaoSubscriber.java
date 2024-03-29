@@ -26,6 +26,7 @@ public class EmissaoCartaoSubscriber {
             var mapper = new ObjectMapper();
             DadosSolicitacaoEmissaoCartao dados = mapper.readValue(payload, DadosSolicitacaoEmissaoCartao.class);
             Cartao cartao = cartaoRepository.findById(dados.getIdCartao()).orElseThrow();
+
             ClienteCartao clienteCartao = new ClienteCartao();
             clienteCartao.setCartao(cartao);
             clienteCartao.setCpf(dados.getCpf());
