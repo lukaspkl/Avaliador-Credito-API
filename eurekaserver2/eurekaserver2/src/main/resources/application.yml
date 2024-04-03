@@ -1,6 +1,12 @@
 spring:
   application:
     name: eurekaserver
+  security:
+    basic:
+      enabled: true
+    user:
+      name: ms-avaliador-credito
+      password: "bHVrYXNwa2w5Mg=="
 
 server:
   port: 8761
